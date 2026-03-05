@@ -39,7 +39,7 @@ dbConn.connect();
 
 // Ovo riješava problem:
 // Origin <origin> is not allowed by Access-Control-Allow-Origin
-// from origin 'http://localhost:4200' has been blocked by CORS policy
+// from origin 'http://localhost:6767' has been blocked by CORS policy
 app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
@@ -530,8 +530,8 @@ app.put('/atrakcije/azuriraj/:id', (req, res) => {
   })
 });
 //port na kojem je app
-app.listen(4200, function () {
-  console.log('Node app is running on port 4200');
+app.listen(6767, function () {
+  console.log('Node app is running on port 6767');
 });
 //module.exports = app;
 
